@@ -103,7 +103,7 @@ jobs:
           key: ${{ runner.os }}-sbt-cache-v2-${{ hashFiles('**/*.sbt') }}-${{ hashFiles('project/build.properties') }}
 
       - name: Download target directories (3.0.0-RC1)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-3.0.0-RC1-${{ matrix.java }}
 
@@ -113,7 +113,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (3.0.0-RC2)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-3.0.0-RC2-${{ matrix.java }}
 
@@ -123,7 +123,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (2.12.13)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-2.12.13-${{ matrix.java }}
 
@@ -133,7 +133,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (2.13.5)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-2.13.5-${{ matrix.java }}
 
@@ -159,7 +159,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Download target directories (3.0.0-RC1)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-3.0.0-RC1-${{ matrix.java }}
 
@@ -169,7 +169,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (3.0.0-RC2)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-3.0.0-RC2-${{ matrix.java }}
 
@@ -179,7 +179,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (2.12.13)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-2.12.13-${{ matrix.java }}
 
@@ -189,7 +189,7 @@ jobs:
           rm targets.tar
 
       - name: Download target directories (2.13.5)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: target-${{ matrix.os }}-2.13.5-${{ matrix.java }}
 
